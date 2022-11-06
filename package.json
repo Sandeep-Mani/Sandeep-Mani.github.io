@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sandeep-Mani/portfolio.git"
-  },
+  "repository": "git+https://github.com/Sandeep-Mani/portfolio.git",
   "author": "Sandeep Mani Kumar Kushwaha",
   "license": "ISC",
   "bugs": {
@@ -21,11 +18,11 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^6.0.0"
+    "gulp-uglifycss": "^1.1.0",
+    "node-sass": "^7.0.3",
+    "sass": "^1.56.0"
   },
-  "dependencies": {
-    "gulp-uglifycss": "^1.1.0"
-  }
+  "main": "src/assets/js/main.js"
 }

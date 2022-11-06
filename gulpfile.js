@@ -1,9 +1,6 @@
-// const { series, src, dest  } = require('gulp');
 const gulp = require('gulp');
-// var gulpif = require('gulp-if')
+const sass = require('gulp-sass')(require('sass'));
 var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
-sass.compiler = require('node-sass')
 const htmlmin = require('gulp-htmlmin');
 
 const _dist = "./dist/Sandeep-Mani.github.io"
@@ -20,7 +17,11 @@ gulp.task('js', function () {
 
 gulp.task('sass', function () {
     return gulp.src('src/assets/sass/**/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
+        // .pipe(sass.sync({
+        //     outputStyle: 'compressed',
+        //     errLogToConsole: true
+        // }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(_dist + '/assets/css'));
 });
 
@@ -48,3 +49,13 @@ gulp.task('default', gulp.parallel(
     "sass",
     "copy",
     "minify_index"));
+
+
+// "gulp": "^3.9.1",
+// "gulp-cli": "^2.3.0",
+// "gulp-htmlmin": "^5.0.1",
+// "gulp-sass": "^5.1.0",
+// "gulp-uglify": "^3.0.2",
+// "node-sass": "^7.0.3"
+
+// "gulp-uglifycss": "^1.1.0"
