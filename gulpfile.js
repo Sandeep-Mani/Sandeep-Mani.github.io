@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const terser = require('gulp-terser');
 const htmlmin = require('gulp-htmlmin');
 
-const _dist = "./dist/Sandeep-Mani.github.io"
+const _dist = "./dist"
 
 gulp.task("clean", (s) => {
     console.log(s)
