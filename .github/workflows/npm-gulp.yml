@@ -26,3 +26,12 @@ jobs:
       run: |
         npm install
         gulp
+    
+    - name: Deploy
+      if: github.ref == 'ref/head/main'
+      uses: JamesIves/github-deploy-action@3.6.2
+      with:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        BRANCH: pages
+        FOLDER: out
+        CLEAN: true
